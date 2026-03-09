@@ -5,25 +5,29 @@ using MediatR;
 
 namespace RazorPagesLab.Pages.AddressBook;
 
-public class UpdateAddressRequest
-	: IRequest
+public class EditAddressRequest
+	: IRequest<Guid>
 {
 	public Guid Id { get; set; }
 
+	// Entry error displays misc errors if needed
+	[DisplayName("Entry Error")]
+	public string entryerror { get; set; }
+
 	[Required(ErrorMessage = "Address line 1 is required.")]
 	[DisplayName("Address Line 1")]
-	public string Line1 { get; set; }
+	public string Line1 { get; set; } = "";
 
 	[DisplayName("Address Line 2")]
-	public string Line2 { get; set; }
+	public string Line2 { get; set; } = "";
 
 	[Required(ErrorMessage = "City is required.")]
-	public string City { get; set; }
+	public string City { get; set; } = "";
 
 	[Required(ErrorMessage = "State is required.")]
-	public string State { get; set; }
+	public string State { get; set; } = "";
 
 	[DisplayName("Postal Code")]
 	[Required(ErrorMessage = "Postal code is required.")]
-	public string PostalCode { get; set; }
+	public string PostalCode { get; set; } = "";
 }
