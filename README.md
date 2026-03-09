@@ -32,10 +32,10 @@ This is the main page showing all the entries. Each entry has an 'edit' and 'del
 - Clicking the button toggles a modal, and data regarding the entry is sent to the modal
 - In the modal, clicking the delete button will call the OnPostDelete function in Index.cshtml.cs
 
-<small>Note: admittedly much of the modal code was copy/pasted from another one of my projects. My frontend brain took the wheel for awhile.</small>
+<small>note: admittedly much of the modal code was copy/pasted from another one of my projects. My frontend brain took the wheel for awhile.</small>
 
 ### Index.cshtml.cs
 This is the controller for the main page. It has a new function OnPostDelete that is triggered when the modal's delete button is pressed. This method does the following:
 - Find entry
 - Remove entry
-- Refreash page
+- Refresh page
